@@ -6,6 +6,8 @@ mapboxgl.accessToken = mapToken;
         zoom: 3
     });
 
+map.addControl(new mapboxgl.NavigationControl());
+
     map.on('load', () => {
         map.addSource('campgrounds', {
             type: 'geojson',

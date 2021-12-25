@@ -6,6 +6,7 @@ mapboxgl.accessToken = mapToken;
   center: parsedCamp.geometry.coordinates, 
   zoom: 10
   });
+  map.addControl(new mapboxgl.NavigationControl());
 
 new mapboxgl.Marker()
     .setLngLat(parsedCamp.geometry.coordinates)
