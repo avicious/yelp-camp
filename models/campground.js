@@ -45,8 +45,7 @@ const campgroundSchema = new Schema({
 campgroundSchema.virtual('properties').get(function(){
     return {
         id: this._id,
-        title: this.title,
-        images: this.images.thumbnail
+        title: this.title
     }
 })
 
