@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+.content {
+    display: flex;
+}
+
+.flash {
+    width: auto;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.camp-info {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #dfe7fd;
+}
+
+.camp-card {
+    width: 40vw;
+    margin-block: 3rem;
+}
+
+.camp-card h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.camp-card a {
+    color: black;
+}
+
+.camp-detail {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.camp-detail p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.camp-data {
+    padding-inline: 2rem;
+}
+
+#description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#username {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.camp-data button {
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    width: 10vw;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-block: 0.5rem;
+}
+
+.camp-map {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #cddafd;
+}
+
+.map-card {
+    width: 40vw;
+    margin-block: 3rem;
+}
+
+.show-map {
+    width: auto;
+    height: 300px;
+}
+
+.marker {
+    background-image: url('https://res.cloudinary.com/dutmy2j89/image/upload/c_crop,g_west,h_27,w_19/v1640506426/YelpCamp/Logo_pxtjfn.svg');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.map-card h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-block: 1rem;
+}
+
+.map-card h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.map-card h3:last-child {
+    margin-top: 1rem;
+}
+
+#submit-button {
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    width: 10vw;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-block: 0.5rem;
+    margin-block: 1rem;
+}
+
+.map-card textarea {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+}
+
+.review {
+    margin-block: 1rem;
+    padding: 0.5rem;
+    background-color: #f0efeb;
+}
+
+.review h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-block: 0.5rem;
+}
+
+.review p {
+    font-size: 1.2rem;
+}
+
+.review button {
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+}
+
+@media(max-width: 769px){
+    .content {
+        flex-direction: column;
+    }
+    .camp-info {
+        width: 100%;
+    }
+    .camp-card {
+        width: 80vw;
+    }
+    .camp-map {
+        width: 100%;
+    }
+    .map-card {
+        width: 80vw;
+    }
+}
+
+@media(max-width: 500px){
+    .camp-card {
+        margin-block: 2rem;
+    }
+    .camp-card h1 {
+        font-size: 1.5rem;
+    }
+    .camp-data {
+        padding-inline: 0;
+    }
+    .camp-data button {
+        width: 20vw;
+    }
+    .map-card h2 {
+        font-size: 1.4rem;
+    }
+    .map-card h3 {
+        font-size: 1.2rem;
+    }
+    #submit-button {
+        width: 20vw;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .review h2 {
+        font-size: 1.2rem;
+    }
+    .review p {
+        font-size: 1rem;
+    }
+    .review button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .flash {
+        font-size: 1rem;
+    }
+}

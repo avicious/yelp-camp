@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    background-color: #dfe7fd;
+    font-family: 'Mukta', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    align-self: center;
+    margin-top: 2rem;
+    font-weight: 700;
+}
+
+.flash {
+    width: auto;
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+.content {
+    width: 90vw;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-around;
+}
+
+.camp {
+    width: 25vw;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f0efeb;
+}
+
+.img img {
+    width: 100%;
+}
+
+#camp-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: black;
+    margin-block: 0.5rem;
+}
+
+.text p {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.text button {
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+@media(max-width: 1070px){
+    .camp {
+        width: 35vw;
+    }
+}
+
+@media(max-width: 769px){
+    .content {
+        width: 80vw;
+    }
+    .camp {
+        width: 60vw;
+        align-self: center;
+    }
+}
+
+@media(max-width: 500px){
+    .content {
+        width: 90vw;
+        padding-inline: 0rem;
+        padding-block: 1rem;
+    }
+    #camp-name {
+        text-align: center;
+    }
+    .camp {
+        width: 80vw;
+    }
+    h1 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+    .flash {
+        font-size: 1rem;
+    }
+}

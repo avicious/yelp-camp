@@ -1,7 +1,11 @@
-<% layout('layouts/boilerplate') %> 
-<div class="row">
-    <h1 class="text-center">Register</h1>
-    <div class="col-6 offset-3">
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/forms.css">
+
+<div class="content">
+    <div class="main-form">
+        <div class="item">
+            <%- include('../partials/flash') %>
+        <h1>Start Exploring camps from all around the world.</h1>
         <form action="/register" method="POST" class="validated-form" novalidate>
             <div class="mb-3">
                 <label class="form-label" for="username">Username</label>
@@ -24,7 +28,24 @@
                     Looks Good!
                 </div>
             </div>
-            <button class="btn btn-success">Register</button>
+            <button class="button">Create an account</button>
+            <p>Already a user?
+                <a href="/login">Sign in</a>
+            </p>
         </form>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="item">
+                <p>"YelpCamp has honestly saved me hours of research time, and the camps on here are definitely well picked and added."</p>
+                <div class="user">
+                    <div class="image"><img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640608562/YelpCamp/User_Testimonial_alrz03.svg" alt="may andrews"></div>
+                    <div>
+                        <div class="info1">May Andrews</div>
+                        <div class="info2">Professional Hiker</div>
+                    </div>
+                </div>
+        </div>
     </div>
 </div>

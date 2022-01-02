@@ -26,7 +26,7 @@ module.exports.renderLogin = (req, res) => {
 }
 
 module.exports.login = (req, res) => {
-    req.flash('success', 'Welcome back!')
+    req.flash('success', `Welcome back, ${req.user.username}`)
     const redirectUrl = req.session.returnTo || '/campgrounds';
     delete req.session.returnTo;
     res.redirect(redirectUrl);
@@ -35,5 +35,5 @@ module.exports.login = (req, res) => {
 module.exports.logout = (req, res) => {
     req.logOut();
     req.flash('success', 'Goodbye :(')
-    res.redirect('/')
+    res.redirect('/campgrounds')
 }

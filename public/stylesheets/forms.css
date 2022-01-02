@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+.content {
+    display: flex;
+}
+
+.main-form {
+    width: 60vw;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8rem;
+    background-color: #dfe7fd;
+}
+
+.main-form h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.main-form p {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+}
+
+.main-form a {
+    color: black;
+}
+
+.form-control {
+    width: 30vw;
+}
+
+.main-form .button {
+    align-self: center;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    width: 30vw;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial {
+    width: 40vw;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8rem;
+    background-color: #cddafd;
+}
+
+.testimonial p {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.image {
+    margin-right: 1rem;
+}
+
+.info1 {
+    font-weight: 700;
+}
+
+.info2 {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 769px){
+    .content {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .main-form, .testimonial {
+        width: 100vw;
+        height: auto;
+    }
+    .main-form {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        align-self: center;
+    }
+    .main-form h1 {
+        font-size: 1.8rem;
+    }
+    .form-control {
+        width: 50vw;
+    }
+    .main-form .button {
+        width: 50vw;
+    }
+    .testimonial {
+        padding-block: 2rem;
+    }
+    .testimonial p {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 500px){
+    .main-form {
+        padding-block: 2rem;
+        padding-inline: 2rem;
+    }
+    .main-form h1 {
+        font-size: 1.4rem;
+    }
+    .form-control {
+        width: 80vw
+    }
+    .main-form .button {
+        width: 80vw;
+    }
+    .testimonial {
+        padding-inline: 2rem;
+    }
+    .testimonial p {
+        font-size: 1rem;
+    }
+}

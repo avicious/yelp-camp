@@ -1,51 +1,69 @@
-<% layout('layouts/boilerplate') %> 
-<div class="row">
-    <h1 class="text-center">New Campground</h1>
-    <div class="col-6 offset-3">
-        <form action="/campgrounds" method="post" novalidate class="validated-form" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label class="form-label" for="title">Title</label>
-                <input class="form-control" type="text" id="title" name="campground[title]" required autofocus>
-                <div class="valid-feedback">
-                    Looks Good!
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/forms.css">
+
+<div class="content">
+    <div class="main-form">
+        <div class="item">
+            <%- include('../partials/flash') %>
+            <h1>Add New Campground</h1>
+            <form action="/campgrounds" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required autofocus>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="location">Location</label>
-                <input class="form-control" type="text" id="location" name="campground[location]" required>
-                <div class="valid-feedback">
-                    Looks Good!
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>  
                 </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="price">Campground Price</label>
-                <div class="input-group">
+                <div class="mb-3">
+                    <label class="form-label" for="images">Add Images</label>
+                    <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="images" name="image" multiple required>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Campground Price</label>
+                    <div class="input-group">
                     <span class="input-group-text" id="price-label">$</span>
                     <input type="text" class="form-control" id="price" placeholder="0.00" aria-describedby="price-label" aria-label="price" name="campground[price]" required>
                     <div class="valid-feedback">
                         Looks Good!
                     </div>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea> 
-                <div class="valid-feedback">
-                    Looks Good!
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea> 
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="images">Add Images</label>
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="images" name="image" multiple required>
+                <div class="mb-5">
+                    <button class="button">Add Campground</button>
                 </div>
-                <div class="valid-feedback">
-                    Looks Good!
+            </form>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="item">
+                <p>"YelpCamp has honestly saved me hours of research time, and the camps on here are definitely well picked and added."</p>
+                <div class="user">
+                    <div class="image"><img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640608562/YelpCamp/User_Testimonial_alrz03.svg" alt="may andrews"></div>
+                    <div>
+                        <div class="info1">May Andrews</div>
+                        <div class="info2">Professional Hiker</div>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-5">
-                <button class="btn btn-success">Add Campground</button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>

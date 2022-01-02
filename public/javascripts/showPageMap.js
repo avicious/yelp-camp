@@ -8,7 +8,10 @@ mapboxgl.accessToken = mapToken;
   });
   map.addControl(new mapboxgl.NavigationControl());
 
-new mapboxgl.Marker()
+const el = document.createElement('div');
+el.className = 'marker';
+  
+new mapboxgl.Marker(el)
     .setLngLat(parsedCamp.geometry.coordinates)
     .setPopup(
         new mapboxgl.Popup({offset: 25})
@@ -16,4 +19,4 @@ new mapboxgl.Marker()
             `<h4>${parsedCamp.title}</h4><p>${parsedCamp.location}</p>`
         )
     )
-    .addTo(map)
+    .addTo(map)    

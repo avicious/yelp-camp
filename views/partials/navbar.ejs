@@ -1,21 +1,22 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<link rel="stylesheet" href="/stylesheets/nav.css">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">YelpCamp</a>
+      <a class="navbar-brand ms-1" href="/"><img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640506426/YelpCamp/Logo_pxtjfn.svg" alt="yelp-camp-logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/campgrounds">Campgrounds</a>
-          <a class="nav-link" href="/campgrounds/new">New Campground</a>
+          <a class="nav-link" href="/campgrounds"><span>All Campgrounds</span></a>
+          <a class="nav-link" href="/campgrounds/new"><span>Add Campground</span></a>
         </div>
         <div class="navbar-nav ms-auto">
           <% if(!currentUser){ %> 
-          <a class="nav-link" href="/login">Login</a>
-          <a class="nav-link" href="/register">Register</a>
+          <a class="nav-link" href="/login"><button class="button">Login</button></a>
+          <a class="nav-link" href="/register"><button class="button">Create an account</button></a>
           <% } else { %> 
-          <a class="nav-link" href="/logout">Logout</a>
+          <snap class="nav-link user"><%= currentUser.username %></snap>
+          <a class="nav-link" href="/logout"><button class="button">Logout</button></a>
           <% } %> 
         </div>
       </div>
