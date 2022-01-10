@@ -1,8 +1,12 @@
 <% layout('layouts/boilerplate') %>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'>
 <link rel="stylesheet" href="/stylesheets/index.css">
 
-<h1>Welcome to the YelpCamp!</h1>
 <div class="flash"><%- include('../partials/flash') %></div>
+<h1>Welcome to the YelpCamp!</h1>
+<p class="main-text">View our hand-picked campgrounds from all over the world, or add your own.</p>
+<div id='map' class="main-map"></div>
 <div class="content">
 <% for(let campground of campgrounds) { %> 
         <div class="camp">
@@ -22,3 +26,8 @@
         </div>
 <% } %> 
 </div>
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const campground = JSON.parse('<%-JSON.stringify(campgrounds)%>');
+</script>
+<script src="/javascripts/mainPageMap.js"></script>

@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/home.css">
-    <title>YelpCamp</title>
-</head>
-<body>
-<div class="logo">
-    <img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640506426/YelpCamp/Logo_pxtjfn.svg" alt="yelp-camp-logo">
-</div>
-<div class="container">
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/stylesheets/home.css">
+
+<div class="content">
 <picture>
-    <source media="(min-width:769px)" srcset="https://res.cloudinary.com/dutmy2j89/image/upload/v1640505122/YelpCamp/indexD_tzh5hd.jpg">
-    <img id="camp-img" src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640505124/YelpCamp/indexM_flmlzj.jpg" alt="camp">
+    <source media="(min-width:769px)" srcset="https://res.cloudinary.com/dutmy2j89/image/upload/v1641273483/YelpCamp/indexD_pnvqyw.jpg">
+    <img id="camp-img" src="https://res.cloudinary.com/dutmy2j89/image/upload/v1641273629/YelpCamp/indexM-min_ncncze.jpg" alt="camp">
 </picture>
 <main>
 <h1>Explore the best camps on Earth.</h1>
 <p class="main-text">YelpCamp is a curated list of the best camping spots on Earth. Unfiltered and unbiased reviews.</p>
-<p class="main-text">View our hand-picked campgrounds from all over the world, or add your own.</p>
 <div class="box">
     <img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640506425/YelpCamp/Checkmark_gevypz.svg" alt="check">
     <p>Add your own camp suggestions.</p>
@@ -35,8 +21,6 @@
     <img src="https://res.cloudinary.com/dutmy2j89/image/upload/v1640506425/YelpCamp/Checkmark_gevypz.svg" alt="check">
     <p>See locations for all camps.</p>
 </div>
-<button><a href="/campgrounds">View Campgrounds</a></button>
+<a href="/campgrounds"><button class="main-button">View Campgrounds</button></a>
 </main>
 </div>
-</body>
-</html>

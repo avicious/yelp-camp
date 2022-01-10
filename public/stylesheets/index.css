@@ -13,10 +13,19 @@ h1 {
     font-weight: 700;
 }
 
+.main-text {
+    align-self: center;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+}
+
 .flash {
     width: auto;
     align-self: center;
     font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .content {
@@ -65,6 +74,21 @@ h1 {
     color: white;
 }
 
+.main-map {
+    width: 80vw;
+    height: 300px;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.marker {
+    background-image: url('https://res.cloudinary.com/dutmy2j89/image/upload/c_crop,g_west,h_27,w_19/v1640506426/YelpCamp/Logo_pxtjfn.svg');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
 @media(max-width: 1070px){
     .camp {
         width: 35vw;
@@ -79,13 +103,18 @@ h1 {
         width: 60vw;
         align-self: center;
     }
+    .main-text {
+        font-size: 1.2rem;
+        padding-inline: 2rem;
+        text-align: center;
+    }
 }
 
 @media(max-width: 500px){
     .content {
         width: 90vw;
         padding-inline: 0rem;
-        padding-block: 1rem;
+        padding-block: 0.5rem;
     }
     #camp-name {
         text-align: center;
@@ -96,9 +125,14 @@ h1 {
     h1 {
         font-size: 1.4rem;
         margin-top: 1rem;
-        margin-bottom: -1rem;
+    }
+    .main-text {
+        font-size: 1rem;
+        padding-inline: 2rem;
+        text-align: center;
     }
     .flash {
         font-size: 1rem;
+        margin-top: 0.5rem;
     }
 }
